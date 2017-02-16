@@ -13,7 +13,7 @@ import (
 // ##### Constants ###########################################################
 
 const APP_NAME string = "csv-value-counter"
-const APP_VERSION string = "1.0.0"
+const APP_VERSION string = "1.0.1"
 
 // ##### Variables ###########################################################
 
@@ -24,7 +24,7 @@ var (
 	outputFilePath = kingpin.Flag("output", "Output file path for results").Short('o').Required().String()
 	fieldIndex     = kingpin.Flag("field", "Field index (Defaults to 1)").Short('f').Required().Int()
 	sorted		   = kingpin.Flag("sort", "Sort (Defaults to false").Short('s').Bool()
-	delimiter	   = kingpin.Flag("delimiter", "Delimiter (Defaults to ,").Short('d').Required().String()
+	delimiter	   = kingpin.Flag("delimiter", "Delimiter (Defaults to ,").Short('d').String()
 )
 
 // ##### Methods #############################################################
