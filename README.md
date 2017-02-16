@@ -43,3 +43,13 @@ To compile the application use the following commands (assuming the same directo
 $ cd csv-value-counter
 $ gb build all
 ```
+
+## Compile for Windows under Linux
+
+**gb** doesn't support cross compiling so you need to use the standard method for compiling e.g. set GOPATH etc:
+
+```
+export GOPATH=/path/to/csv-value-counter/vendor
+cd /path/to/csv-value-counter/src/github.com/woanware/csv-value-counter
+GOOS=windows GOARCH=amd64 go build -o csv-value-counter.exe main.go sort.go
+```
